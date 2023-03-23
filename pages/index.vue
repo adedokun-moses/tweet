@@ -1,10 +1,10 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid m-0 p-0">
 
 
-        <div class="home m-0 p-0">
+        <div :class="[isActive ? 'home' : 'home_page']">
             <div class="row">
-                <div class="col-sm-11 mx-auto">
+                <div class="col-sm-11 mx-auto ">
                     <div class="row">
                         <div class="col-sm-12 pt-3">
                             <div class="row">
@@ -12,8 +12,19 @@
                                     <h5>Hey, Bistom</h5>
                                     <p>Here’s what is happening in your workspace</p>
                                 </div>
-                                <div class="col-sm-4 input m-0 p-0 ">
-                                    <input type="text" placeholder="Search " id="">
+                                <div class="col-sm-4 d-flex m-0 p-0 ">
+                                    <div class="search_btn">
+                                        <input type="text" placeholder="Search " id="">
+                                    </div>
+
+                                    <div class="toggleBn ">
+                                        <input type="checkbox" @click="toggleDarkMode" class="checkbox" id="checkbox">
+                                        <label for="checkbox" class="checkbox-label">
+                                            <i class="fas fa-moon"></i>
+                                            <i class="fas fa-sun"></i>
+                                            <span class="ball"></span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -28,7 +39,7 @@
                                     <h5><i class="fa fa-message"></i> New Feedback</h5>
                                 </div>
                                 <div>
-                                    <h5><i class="fa-solid fa-leaf"></i>  New Initiative</h5>
+                                    <h5><i class="fa-solid fa-leaf"></i> New Initiative</h5>
                                 </div>
                                 <div>
                                     <h5><i class="fa-solid fa-pizza-slice"></i> New design task</h5>
@@ -142,7 +153,7 @@
                                             </div>
                                             <div>
                                                 <h3 style="font-size: 17px; font-weight: bold
-                                                        ;">Improve dark mode</h3>
+                                                                        ;">Improve dark mode</h3>
                                             </div>
 
                                         </div>
@@ -164,7 +175,7 @@
                                             </div>
                                             <div>
                                                 <h3 style="font-size: 17px; font-weight: bold
-                                                        ;">Improve dark mode</h3>
+                                                                        ;">Improve dark mode</h3>
                                             </div>
 
                                         </div>
@@ -181,11 +192,12 @@
                                     <div class="row">
                                         <div class="col-sm-8 display_design">
                                             <div class="food_class">
-                                                <h3><i class="fa-solid fa-mobile mr-2" style="color: black;"></i> CYC-80</h3>
+                                                <h3><i class="fa-solid fa-mobile mr-2" style="color: black;"></i> CYC-80
+                                                </h3>
                                             </div>
                                             <div>
                                                 <h3 style="font-size: 17px; font-weight: bold
-                                                        ;">Improve dark mode</h3>
+                                                                        ;">Improve dark mode</h3>
                                             </div>
 
                                         </div>
@@ -206,7 +218,7 @@
                                             </div>
                                             <div>
                                                 <h3 style="font-size: 17px; font-weight: bold
-                                                        ;">Improve dark mode</h3>
+                                                    ;">Improve dark mode</h3>
                                             </div>
 
                                         </div>
@@ -229,6 +241,30 @@
     </div>
 </template>
 
+<script >
+import { ref } from 'vue';
+
+export default {
+    setup() {
+        const isActive = ref(false);
+
+        function toggleDarkMode() {
+            //  home.value = !home.value;
+
+            if (isActive.value) {
+                isActive.value = false;
+            } else {
+                isActive.value = true;
+            }
+        }
+
+        return { isActive, toggleDarkMode };
+    },
+};
+
+
+</script>
+
 
 <style scoped>
 .home {
@@ -240,16 +276,34 @@
     scrollbar-width: none;
     margin: 0px;
     padding: 0px;
-
     -ms-overflow-style: none !important;
     /* for Internet Explorer, Edge */
+    width: 100%;
 }
+
+.home_page {
+    background: whitesmoke;
+    height: 100vh;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin: 0px;
+    padding: 0px;
+    -ms-overflow-style: none !important;
+    /* for Internet Explorer, Edge */
+    width: 100%;
+}
+
 
 .home::-webkit-scrollbar {
     display: none;
 }
+.home_page::-webkit-scrollbar {
+    display: none;
+}
 
-.input input {
+.search_btn input {
     background: #EDEDED;
     margin-top: 20px;
     padding: 9px;
@@ -258,11 +312,12 @@
     border: none;
 }
 
-.input input:focus {
+.search_btn input:focus {
     background: #EDEDED;
     border-radius: 8px;
     width: 100%;
     border: none;
+    outline: none;
 }
 
 .action_tab {
@@ -411,10 +466,12 @@
     padding: 16px;
 
 }
-.font_design{
+
+.font_design {
     display: flex;
     align-items: center;
 }
+
 .font_design h3 {
     background: #E7DEFA;
     border-radius: 4px;
@@ -423,8 +480,88 @@
     padding: 10px;
 }
 
-.font_design i{
+.font_design i {
     margin: 0px 10px;
     color: #989898;
+}
+
+
+
+
+.toggleBn {
+    width: 10%;
+    margin: auto;
+}
+
+body.dark {
+    background-color: #292c35;
+}
+
+/* #9b59b6 */
+
+body.dark h1,
+body.dark .support a {
+    color: #fff;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    margin: 30px auto;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+/*  Support me if you like it */
+.support {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.support a {
+    color: #292c35;
+    font-size: 32px;
+    backface-visibility: hidden;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.support a:hover {
+    transform: scale(1.1);
 }
 </style>
