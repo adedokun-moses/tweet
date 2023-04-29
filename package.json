@@ -10,5 +10,10 @@
   "devDependencies": {
     "@nuxtjs/google-fonts": "^3.0.0",
     "nuxt": "^3.3.1"
+  },
+  "dependencies": {
+    "countries-list": "^2.6.1",
+    "country-list-json": "^1.1.0",
+    "get-all-country-info": "^1.1.6"
   }
 }
