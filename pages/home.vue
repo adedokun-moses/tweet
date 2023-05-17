@@ -77,7 +77,7 @@
                         </div>
 
                         <div class="col-sm-12 team_tab mt-4">
-                            <h5 class="mt-3">Your Team</h5>
+                            <h5 class="mt-3">Your Recent Projects </h5>
                             <div class="row">
                                 <div class="team_member d-flex ">
 

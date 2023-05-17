@@ -12,6 +12,7 @@
     "nuxt": "^3.3.1"
   },
   "dependencies": {
+    "@nuxt/image": "^0.7.1",
     "countries-list": "^2.6.1",
     "country-list-json": "^1.1.0",
     "get-all-country-info": "^1.1.6"

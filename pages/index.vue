@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div class="container-fluid home">
         <div class="row">
-            <div class="col-sm-12 homepage">
+            <div class="col-sm-10 mx-auto homepage">
                 <div class="row">
                     <div class="col-sm-6 homeimg">
 
@@ -51,8 +51,12 @@ const userLogin = () => {
 
 
 <style scoped>
+.home{
+    background: url(../assets/moplex_latest.png);
+    height: 100vh;
+}
 .homepage {
-    margin: 4rem 0px;
+    margin: 3.5rem 0px;
     background: rgb(233, 227, 227);
     height: 500px;
     border-radius: 10px;

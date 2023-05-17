@@ -43,13 +43,16 @@
 
 
                     <ul class="mt-4">
-                        <li style="color: #989898;"><i class="fa fa-caret-down" style="margin-right: 10px;"></i> Movies
-                            boards </li>
+                        <li style="color: #989898;"><i class="fa fa-caret-down" style="margin-right: 10px;"></i>Credentials </li>
                         <div class="nav_style">
-                            <li><i class="fa fa-home" style="margin-right: 10px;"></i>Design System</li>
-                            <li><i class="fa fa-envelope" style="margin-right: 10px;"></i>Cube Design Team</li>
-                            <li><i class="fa fa-plus-circle" style="margin-right: 10px;"></i>Cube 2.0</li>
-                            <li><i class="fa fa-plus-circle" style="margin-right: 10px;"></i>Add View</li>
+                            <Nuxt-link to="/user">
+                                <li><i class="fa fa-user" style="margin-right: 10px;"></i>Add User</li>
+                            </Nuxt-link>
+
+                            <Nuxt-link to="/userstab">
+                                <li><i class="fa fa-envelope" style="margin-right: 10px;"></i>Manage Users</li>
+                            </Nuxt-link>
+                        
                         </div>
                     </ul>
 
@@ -61,12 +64,6 @@
                             <li><i class="fa fa-home" style="margin-right: 10px;"></i>Log Out</li>
                         </div>
                     </ul>
-
-
-
-
-
-
 
                 </header>
 
@@ -101,20 +98,10 @@
             </div>
 
             <div class="col-sm-10 m-0 p-0 bg-dark">
-
-
                 <slot />
-
-
-
-
-
             </div>
 
             <!-- Fix AND Fox Modal -->
-
-
-
         </div>
     </div>
 
@@ -168,16 +155,36 @@ ul {
 .nav_style li {
 
     width: 90%;
-    padding: 8px 5px;
-    font-size: 12px;
+    padding: 9px 5px;
+    font-size: 15.5px;
 }
 
 .nav_style li:hover {
-    background: #1CA19E;
+    background: red;
     width: 90%;
-    padding: 8px 5px;
+    padding: 9px 5px;
     border-radius: 12px;
 }
+/* .nav_style a.router-link-active{
+    background: red;
+    width: 90%;
+    padding: 9px 5px;
+    border-radius: 12px;
+} */
+/* .nav_style a:active {
+    background: red;
+    width: 90%;
+    padding: 9px 5px;
+    border-radius: 12px;
+} */
+
+/* .nav_style a.router-link-exact-active {
+    background: red;
+    width: 90%;
+    padding: 9px 5px;
+    border-radius: 12px;
+} */
+
 
 .user-id {
     height: 100px;
@@ -268,14 +275,17 @@ ul {
     padding: 10px;
     width: 200px;
     cursor: pointer;
+    border: none;
 }
 
 .next_btn:hover {
-    background: blueviolet;
+    background: red;
     border-radius: 5px;
     padding: 10px;
     margin: 20px auto;
     width: 200px;
+    border: none;
+    color: white;
 
 }
 
