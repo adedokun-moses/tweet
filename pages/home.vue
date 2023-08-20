@@ -55,19 +55,22 @@
                                 <div class="col-sm-10 design_plat m-0 p-0 mt-3">
 
                                     <div class=" design_tab ">
-                                        <h5><img src="../assets/blossom.png" alt=""> Front-end <span
-                                                style="color:  #989898;"><br> The cool guys board</span></h5>
-                                        <img src="../assets/f.png" alt="" class="mt-5" style="margin-left: 15px;">
+                                        <h5><img src="../assets/blossom.png" alt=""> All Movies <span
+                                                style="color:  #989898;"></span></h5>
+                                                <h4>30</h4>
+                                      <!--   <img src="../assets/f.png" alt="" class="mt-5" style="margin-left: 15px;"> -->
                                     </div>
                                     <div class=" design_tab ">
-                                        <h5><img src="../assets/a.png" alt=""> Design <span style="color:  #989898;"><br>
-                                                The cool guys board</span></h5>
-                                        <img src="../assets/ff.png" alt="" class="mt-5" style="margin-left: 15px;">
+                                        <h5><img src="../assets/a.png" alt=""> Purchased Movies <span style="color:  #989898;"><br>
+                                              </span></h5>
+                                              <h4>30</h4>
+                             <!--            <img src="../assets/ff.png" alt="" class="mt-5" style="margin-left: 15px;" -->>
                                     </div>
                                     <div class=" design_tab ">
-                                        <h5><img src="../assets/m.png" alt=""> Road-map <span style="color:  #989898; "><br>
-                                                The cool guys board</span></h5>
-                                        <img src="../assets/fff.png" alt="" class="mt-5" style="margin-left: 15px;">
+                                        <h5><img src="../assets/m.png" alt=""> Produced Movies <span style="color:  #989898; "><br>
+                                              </span></h5>
+                                        <h4>30</h4>
+                                      <!--   <img src="../assets/fff.png" alt="" class="mt-5" style="margin-left: 15px;"> -->
                                     </div>
 
 
@@ -83,7 +86,7 @@
 
                                     <div class="team col-sm-1">
                                         <i class="fa fa-plus"></i>
-                                        <h4>Invite new <br> member</h4>
+                                        <h4>Add new <br> movie</h4>
                                     </div>
 
                                     <div class="team col-sm-1">
@@ -364,8 +367,18 @@ const toggleDarkMode = () => {
 }
 
 .design_tab h5 {
-    font-size: 13px;
-    margin: 15px 0px 0px 15px;
+    font-size: 24px;
+    text-align: center;
+    margin: 15px 0px 0px 0px;
+}
+.design_tab h4 {
+    font-size: 20px;
+    width: 30%;
+    margin: 10px auto;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
 }
 
 .team_tab {

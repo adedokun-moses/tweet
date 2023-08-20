@@ -4,8 +4,8 @@
 
         <div class="congrat mt-5">
             <h5>Welcome On Board </h5>
-            <h3><br><span style="padding-top: 10px"><i class="fa fa-spinner fa-3x fa-spin"></i> </span></h3>
-            <img src="../assets/pana.png" alt="welcome">
+            <h3><br><span style="padding-top: 13px; color: #FFFFFF;"><i class="fa fa-spinner fa-3x fa-spin"></i> </span></h3>
+            <img src="../assets/moplexlogo.png" alt="welcome" style="margin-top: 120px;">
         </div>
 
     </div>
@@ -15,7 +15,7 @@
 import { ref, onMounted } from 'vue'
 
 onMounted(() => {
-    console.log('Component mounted!')
+   // console.log('Component mounted!')
     const router = useRouter()
     setTimeout(() => router.push('/home'), 4000);
 })
@@ -23,7 +23,7 @@ onMounted(() => {
 
 <style scoped>
 .container {
-    background: #f5f5f5;
+    background: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100vh;
 }
@@ -40,9 +40,10 @@ onMounted(() => {
 }
 
 .congrat h5 {
-    font-size: 20px;
-    color: #1757D4;
+    font-size: 50px;
+    color: #ffffff;
     margin: 0px;
+    font-weight: bolder;
 }
 
 @media only screen and (max-width: 600px) {

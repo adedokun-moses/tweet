@@ -4,7 +4,7 @@
             <div class="col-sm-10 mx-auto homepage">
                 <div class="row">
                     <div class="col-sm-6 homeimg">
-
+                        <img src="../assets/moplexlogo.png">
                     </div>
                     <div class="col-sm-6">
                         <form class="mt-5">
@@ -24,7 +24,7 @@
                                 <p>Forgot Password?</p>
                             </div>
                             <div class="formgroup mt-3">
-                                <button class="btn form-control bg-success" @click.prevent="userLogin()">{{ login
+                                <button class="btn form-control " @click.prevent="userLogin()">{{ login
                                 }}</button>
                             </div>
 
@@ -51,15 +51,18 @@ const userLogin = () => {
 
 
 <style scoped>
-.home{
-    background: url(../assets/moplex_latest.png);
+.home {
+    background: url(../assets/bg.png);
     height: 100vh;
 }
+
 .homepage {
     margin: 3.5rem 0px;
-    background: rgb(233, 227, 227);
+    background: rgba(0, 0, 0, 0.8);
     height: 500px;
     border-radius: 10px;
+    opacity: 70;
+    color: white;
 
 }
 
@@ -77,6 +80,13 @@ form h5 {
 .formgroup button {
     margin-top: 10px;
     padding: 10px;
+
+}
+
+.formgroup button {
+    background: #ff0000;
+    font-weight: bolder;
+    color: white;
 }
 
 .formgroup p {
@@ -91,11 +101,19 @@ form h5 {
 
 .formgroup button:hover {
     border: none;
+    margin-top: 10px;
+    padding: 10px;
 }
-.formgroup i{
+
+.formgroup i {
     position: relative;
     bottom: 35px;
     right: 20px;
     float: right;
 }
+.homeimg img{
+   display: block;
+   margin: 200px 0px auto auto;
+} 
+
 </style>

@@ -27,7 +27,7 @@
                                           <!--   <nuxt-image src="./movies/images/pana.png" /> -->
                                         </div>
                                         <div style="flex-basis: 30%;">
-                                            <h3 style="font-size: 15px;"> <i class="fa fa-edit mr-5"></i> Edit </h3>
+                                            <h3 style="font-size: 15px; cursor: pointer;" @click="editMovie()"> <i class="fa fa-edit mr-5"></i> Edit </h3>
                                             <h3 style="font-size: 15px;"> <i class="fa fa-trash mr-5"></i> Delete</h3>
                                         </div><!--  -->
                                     </div>
@@ -198,6 +198,7 @@
 
 
     </main>
+    
 </template>
 
 <script  setup>
@@ -205,6 +206,12 @@
 definePageMeta({
     layout: 'nav'
 })
+
+const editMovie = () => {
+    alert('Deleted Movies')
+}
+
+
 
 </script>
 
